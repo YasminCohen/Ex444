@@ -6,7 +6,9 @@
 int main()
 {
     char choice, c;
-    int src =0 , v =0;
+    int src, v;
+    src = 0;
+    v = src;
     p_node temp = NULL;
     p_node *head = &temp;
     while (scanf("%c", &choice) != EOF)
@@ -17,7 +19,7 @@ int main()
             deleteGraph(head);
             scanf("%d", &v);
             *head = createGraph(v);
-
+            scanf("%c", &c);
             while (scanf("%c", &c) != EOF)
             {
                 if (c == 'n')
