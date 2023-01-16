@@ -38,7 +38,7 @@ int main()
             }
             // choice = c;
         //}
-        break;
+        continue;
         // if (choice == 'B')
         // {
         case 'B':
@@ -46,7 +46,7 @@ int main()
 
         //     continue;
         // }
-        break;
+        continue;
         // if (choice == 'D')
         // {
         case 'D':
@@ -54,7 +54,7 @@ int main()
 
         //     continue;
         // }
-        break;
+        continue;
         // if (choice == 'S')
         // {
         case 'S':
@@ -64,12 +64,12 @@ int main()
             printf("Dijsktra shortest path: %d \n", dist);
         //     continue;
         // }
-        break;
+        continue;
         // if (choice == 'T')
         // {
         case 'T':
             TSP(*head);
-        break;
+        continue;
         }
     }
     deleteGraph(head);
