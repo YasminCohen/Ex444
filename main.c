@@ -13,11 +13,8 @@ int main()
     p_node *head = &temp;
     while (scanf("%c", &choice) != EOF)
     {
-        switch (choice)
+        if (choice == 'A')
         {
-        case 'A':
-        // if (choice == 'A')
-        // {
             deleteGraph(head);
             scanf("%d", &v);
             *head = createGraph(v);
@@ -36,40 +33,33 @@ int main()
                     break;
                 }
             }
-            // choice = c;
-        //}
-        continue;
-        // if (choice == 'B')
-        // {
-        case 'B':
+            choice = c;
+        }
+        if (choice == 'B')
+        {
+
             addNode_B(head);
 
-        //     continue;
-        // }
-        continue;
-        // if (choice == 'D')
-        // {
-        case 'D':
+            continue;
+        }
+        if (choice == 'D')
+        {
             deleteNode(head);
 
-        //     continue;
-        // }
-        continue;
-        // if (choice == 'S')
-        // {
-        case 'S':
+            continue;
+        }
+        if (choice == 'S')
+        {
             int start = -1, end = -1;
             scanf("%d %d", &start, &end);
             int dist = shortestPath(*head, start, end);
             printf("Dijsktra shortest path: %d \n", dist);
-        //     continue;
-        // }
-        continue;
-        // if (choice == 'T')
-        // {
-        case 'T':
+            continue;
+        }
+        if (choice == 'T')
+        {
             TSP(*head);
-        continue;
+            continue;
         }
     }
     deleteGraph(head);
