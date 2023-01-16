@@ -16,11 +16,14 @@ int main()
         switch (choice)
         {
         case 'A':
+
             deleteGraph(head);
             scanf("%d", &v);
             *head = createGraph(v);
+
             scanf("%c", &c);
-            while (scanf("%c", &c) != EOF)
+
+            while (scanf("%c", &c) != 0)
             {
                 if (c == 'n')
                 {
@@ -33,12 +36,15 @@ int main()
                 }
             }
         break;
+
         case 'B':
             addNode_B(head);
         break;
+
         case 'D':
             deleteNode(head);
         break;
+  
         case 'S':
             int start = -1, end = -1;
             scanf("%d %d", &start, &end);
