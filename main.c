@@ -16,7 +16,8 @@ int main()
         switch (choice)
         {
         case 'A':
-
+        // if (choice == 'A')
+        // {
             deleteGraph(head);
             scanf("%d", &v);
             *head = createGraph(v);
@@ -35,23 +36,38 @@ int main()
                     break;
                 }
             }
+            // choice = c;
+        //}
         break;
-
+        // if (choice == 'B')
+        // {
         case 'B':
             addNode_B(head);
-        break;
 
+        //     continue;
+        // }
+        break;
+        // if (choice == 'D')
+        // {
         case 'D':
             deleteNode(head);
+
+        //     continue;
+        // }
         break;
-  
+        // if (choice == 'S')
+        // {
         case 'S':
             int start = -1, end = -1;
             scanf("%d %d", &start, &end);
             int dist = shortestPath(*head, start, end);
             printf("Dijsktra shortest path: %d \n", dist);
+        //     continue;
+        // }
         break;
-       case 'T':
+        // if (choice == 'T')
+        // {
+        case 'T':
             TSP(*head);
         break;
         }
